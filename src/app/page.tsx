@@ -1,9 +1,9 @@
 export default function Home() {
-	return (
-		<div className='w-10 bg-red-500 text-2xl'>
-			<div>Hello world</div>
-		</div>
-	);
+  return (
+    <div>
+      <div>Hello world</div>
+    </div>
+  );
 }
 
 // NEXT
@@ -24,6 +24,7 @@ export default function Home() {
 // React
 
 // theme context
+// lang context
 // adaptive
 // useDebounce
 // localstorage

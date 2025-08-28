@@ -1,27 +1,45 @@
-import { headerNavigation } from "@/constants/navigation.constant";
-import { Apple } from "lucide-react";
-import { useMemo } from "react";
-import { LinkNavigation } from "./Link";
+import { Heart, Search, ShoppingCart, Sun } from "lucide-react";
+import { Button } from "../ui/Button";
+import { Input } from "../ui/Input";
+import { Logo } from "./Logo";
+import { Navigation } from "./Navigation";
 
 export const Header = () => {
-  const navigation = useMemo(() => {
-    return headerNavigation.map((link) => (
-      <LinkNavigation key={link.href} href={link.href} icon={link.icon} name_en={link.name_en} name_ru={link.name_ru} />
-    ));
-  }, []);
-
   return (
-    <header className="flex gap-4">
-      <div className="flex text-2xl items-center gap-1">
-        <div className="font-manrope font-bold">Product</div>
+    <header className="flex justify-between items-center absolute z-10 w-full bg-white shadow-xl p-2 mx-auto">
+      <div className="flex items-center gap-5">
+        {/* Логотип */}
+        <Logo />
+
+        {/* Навигация */}
+        <Navigation />
+      </div>
+      <div className="flex items-center gap-2.5">
+        <div className="flex items-center">
+          <Input placeholder="Найти товар" className="border-r-0 rounded-r-none" />{" "}
+          <div className="rounded-md border h-9 text-base border-l-0 rounded-l-none relative pr-3">
+            <Search className="relative top-1/2 transform -translate-y-1/2 w-5" />
+          </div>
+        </div>
         <div>
-          <Apple />
+          <Button>
+            <Heart />
+          </Button>
+        </div>
+        <div>
+          <Button>
+            <ShoppingCart />
+          </Button>
+        </div>
+        <div>
+          <Button>
+            <Sun />
+          </Button>
+        </div>
+        <div>
+          <Button>En</Button>
         </div>
       </div>
-      <div className="flex items-center gap-2">{navigation}</div>
-      <div>Поиск</div>
-      <div>Избранное</div>
-      <div>Корзина</div>
     </header>
   );
 };

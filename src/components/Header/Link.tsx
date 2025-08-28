@@ -6,11 +6,12 @@ type Props = {
   icon: LucideIcon;
   name_en: string;
   name_ru: string;
+  isActive?: boolean;
 };
 
-export const LinkNavigation = ({ href, icon: Icon, name_en, name_ru }: Props) => {
+export const LinkNavigation = ({ href, icon: Icon, name_en, name_ru, isActive }: Props) => {
   return (
-    <Link key={href} href={href} className="flex items-center gap-0.5">
+    <Link key={href} href={href} className="flex items-center gap-0.5 font-manrope text-lg font-medium">
       <div>
         <Icon />
       </div>

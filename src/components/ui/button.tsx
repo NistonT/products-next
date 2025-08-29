@@ -32,7 +32,7 @@ const buttonVariants = cva(
   },
 );
 
-export default function Button({
+function Button({
   className,
   variant,
   size,
@@ -47,4 +47,4 @@ export default function Button({
   return <Comp data-slot="button" className={cn(buttonVariants({ variant, size, className }))} {...props} />;
 }
 
-export { buttonVariants };
+export { Button, buttonVariants };

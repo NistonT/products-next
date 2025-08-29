@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
+import { Button } from "@ui/Button";
+import { Input } from "@ui/Input";
 import { Heart, Search, ShoppingCart, Sun } from "lucide-react";
 import { Logo } from "./Logo";
 import { Navigation } from "./Navigation";

@@ -1,6 +1,6 @@
-import { Button } from "@ui/Button";
-import { Input } from "@ui/Input";
 import { Heart, Search, ShoppingCart, Sun } from "lucide-react";
+import { Button } from "../Button";
+import { Input } from "../Input";
 import { Logo } from "./Logo";
 import { Navigation } from "./Navigation";
 

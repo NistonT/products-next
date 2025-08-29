@@ -1,4 +1,4 @@
-import { Button } from "@ui/Button";
+import { Button } from "@/components/Button";
 import Image from "next/image";
 
 export const Main = () => {
